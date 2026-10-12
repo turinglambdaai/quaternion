@@ -1,0 +1,6 @@
+# Racket build artifacts
+compiled/
+doc/
+
+# OS noise
+.DS_Store
