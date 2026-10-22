@@ -1,5 +1,7 @@
 # quaternion
 
+**English** · [中文](README.zh-CN.md)
+
 [![CI](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Float64 quaternion algebra for 3D rotations, in pure Racket. Built for
