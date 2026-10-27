@@ -85,7 +85,7 @@ From the repository root after installing Racket:
 raco pkg install --auto --link "$(pwd)"
 raco test -p quaternion
 racket examples/quickstart.rkt
-raco setup -l quaternion --check-pkg-deps
+raco setup --check-pkg-deps -l quaternion
 ```
 
 CI runs all steps on Linux, macOS and Windows. Report a minimal reproduction
