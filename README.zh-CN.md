@@ -59,7 +59,7 @@ $ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/qu
 raco pkg install --auto --link "$(pwd)"
 raco test -p quaternion
 racket examples/quickstart.rkt
-raco setup -l quaternion --check-pkg-deps
+raco setup --check-pkg-deps -l quaternion
 ```
 
 CI 在 Linux、macOS、Windows 上运行上述步骤。反馈时请在
