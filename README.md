@@ -30,7 +30,8 @@ $ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/qu
 ## Example
 
 ```racket
-(require quaternion)
+#lang racket/base
+(require racket/flonum quaternion)
 
 ;; 90-degree rotation about Z
 (define q90z (q-from-axis-angle (flvector 0.0 0.0 1.0) 1.5707963267948966))
@@ -71,10 +72,24 @@ $ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/qu
 
 ## Development
 
-```console
-$ raco test -p quaternion
-$ raco setup --check-pkg-deps --pkgs quaternion
+The [Scribble API manual](quaternion/scribblings/quaternion.scrbl) is the
+normative reference for contracts, axis-angle/Euler conventions, matrices and
+interpolation. `flvector` comes from `racket/flonum` (not
+`racket/base`), so the import above is necessary when copying the example.
+The [executable quickstart](examples/quickstart.rkt) checks the 90-degree
+rotation within a floating-point tolerance and the non-unit contract error.
+
+From the repository root after installing Racket:
+
+```sh
+raco pkg install --auto --link "$(pwd)"
+raco test -p quaternion
+racket examples/quickstart.rkt
+raco setup -l quaternion --check-pkg-deps
 ```
+
+CI runs all steps on Linux, macOS and Windows. Report a minimal reproduction
+and Racket version at [GitHub Issues](https://github.com/turinglambdaai/quaternion/issues).
 
 ## License
 
