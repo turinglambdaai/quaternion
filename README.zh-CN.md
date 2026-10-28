@@ -25,7 +25,8 @@ $ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/qu
 ## 示例
 
 ```racket
-(require quaternion)
+#lang racket/base
+(require racket/flonum quaternion)
 
 ;; 90-degree rotation about Z
 (define q90z (q-from-axis-angle (flvector 0.0 0.0 1.0) 1.5707963267948966))
@@ -46,10 +47,24 @@ $ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/qu
 
 ## 开发
 
-```console
-$ raco test -p quaternion
-$ raco setup --check-pkg-deps --pkgs quaternion
+[权威 Scribble API 手册](quaternion/scribblings/quaternion.scrbl)定义函数契约、
+轴角/欧拉角约定、矩阵和插值行为。注意 `flvector` 属于
+`racket/flonum`，并非 `racket/base`；复制示例时必须引入该模块。
+[可执行入门示例](examples/quickstart.rkt)会以浮点容差验证 90° 旋转，
+并验证非单位四元数的契约错误。
+
+安装 Racket 后，在仓库根目录执行：
+
+```sh
+raco pkg install --auto --link "$(pwd)"
+raco test -p quaternion
+racket examples/quickstart.rkt
+raco setup --check-pkg-deps -l quaternion
 ```
+
+CI 在 Linux、macOS、Windows 上运行上述步骤。反馈时请在
+[GitHub Issues](https://github.com/turinglambdaai/quaternion/issues) 附上
+脱敏最小样例与 Racket 版本。
 
 ## 许可证
 
