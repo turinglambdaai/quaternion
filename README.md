@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh-CN.md)
 
-[![CI](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/quaternion/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/quaternion/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Float64 quaternion algebra for 3D rotations, in pure Racket. Built for
 graphics, robotics, and aerospace work: everything runs on IEEE-754 double
@@ -24,7 +24,7 @@ $ raco pkg install --auto --link /path/to/quaternion
 Or straight from GitHub:
 
 ```console
-$ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/quaternion
+$ raco pkg install --auto --name quaternion https://github.com/turlamai/quaternion
 ```
 
 ## Example
@@ -89,7 +89,7 @@ raco setup --check-pkg-deps -l quaternion
 ```
 
 CI runs all steps on Linux, macOS and Windows. Report a minimal reproduction
-and Racket version at [GitHub Issues](https://github.com/turinglambdaai/quaternion/issues).
+and Racket version at [GitHub Issues](https://github.com/turlamai/quaternion/issues).
 
 ## License
 
