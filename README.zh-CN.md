@@ -2,7 +2,7 @@
 
 [English](README.md) · **中文**
 
-[![CI](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/quaternion/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/quaternion/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/quaternion/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 纯 Racket 实现的 Float64 四元数代数，用于三维旋转。面向图形、机器人与航空航天场景：所有计算都运行在 IEEE-754 双精度浮点数（flonum）上，除 `base` 外无其他依赖。
 
@@ -19,7 +19,7 @@ $ raco pkg install --auto --link /path/to/quaternion
 或直接从 GitHub 安装：
 
 ```console
-$ raco pkg install --auto --name quaternion https://github.com/turinglambdaai/quaternion
+$ raco pkg install --auto --name quaternion https://github.com/turlamai/quaternion
 ```
 
 ## 示例
@@ -63,7 +63,7 @@ raco setup --check-pkg-deps -l quaternion
 ```
 
 CI 在 Linux、macOS、Windows 上运行上述步骤。反馈时请在
-[GitHub Issues](https://github.com/turinglambdaai/quaternion/issues) 附上
+[GitHub Issues](https://github.com/turlamai/quaternion/issues) 附上
 脱敏最小样例与 Racket 版本。
 
 ## 许可证
